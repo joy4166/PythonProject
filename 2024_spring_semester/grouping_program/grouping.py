@@ -3,8 +3,9 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 import sqlite3
+from grouping_2 import Grouping
 
-class MainWindow(QMainWindow):
+class Assign(QMainWindow):
         def __init__(self):
             super().__init__()
             self.init_ui()
@@ -73,7 +74,7 @@ class MainWindow(QMainWindow):
             widget.setLayout(self.entire_hbox)
             self.setCentralWidget(widget)
             self.setGeometry(700, 400, 1400, 700)
-            self.setWindowTitle("")
+            self.setWindowTitle("Player Assign")
             self.setWindowIcon(QIcon("Maicon.ico"))
             self.statusBar().showMessage("Developed by Cactus")
 
@@ -190,6 +191,8 @@ class MainWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication([])
-    window = MainWindow()
-    window.show()
+    fwindow = Assign()
+    swindow = Grouping()
+    fwindow.show()
+    swindow.show()
     sys.exit(app.exec_())

@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import  *
 from PyQt5 import QtCore
 
 
-class MainWindow(QMainWindow):
+class Grouping(QMainWindow):
         def __init__(self):
             super().__init__()
             self.init_ui()
@@ -49,7 +49,7 @@ class MainWindow(QMainWindow):
             widget.setLayout(self.entire_hbox)
             self.setCentralWidget(widget)
             self.setGeometry(700, 400, 1800, 1000)
-            self.setWindowTitle("")
+            self.setWindowTitle("Grouping Program")
             self.statusBar().showMessage("Developed by Cactus")
 
         def set_layout(self):
@@ -180,6 +180,6 @@ class MainWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication([])
-    window = MainWindow()
+    window = Grouping()
     window.show()
     sys.exit(app.exec_())

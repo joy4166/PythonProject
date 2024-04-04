@@ -92,7 +92,7 @@ class MainWindow(QMainWindow):
         widget = QWidget()
         widget.setLayout(self.entire_grid)
         self.setCentralWidget(widget)
-        self.setGeometry(400,350,1150,400)
+        self.setGeometry(400,350,1800,400)
         self.setWindowTitle("Vending Machine")
         self.statusBar().showMessage("Developed by Cactus")
 
@@ -171,14 +171,7 @@ class MainWindow(QMainWindow):
                         left = self.drink_left_sp_list[i].value()
                         self.save_data(con, id, name, price, left)
                 else:
-                    # data = self.take_backup(self.con)
-                    # for i in range(10):
-                    #     self.drink_name_le_list[i].setText(data[i][1])
-                    #     self.drink_price_le_list[i].setText(str(data[i][2]))
-                    #     self.drink_left_sp_list[i].setValue(data[i][3])
-                    #
-                    # self.buy_limit()
-                    self.change_lb2.setText("Error")
+                    self.change_lb2.setText("금액부족")
                     return
 
         except Exception as e:
